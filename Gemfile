@@ -42,7 +42,7 @@ gem 'thin'
 gem 'haml-rails'
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.7.0' # Because intellij doesn't support the latest version of rspec yet
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'faker'
