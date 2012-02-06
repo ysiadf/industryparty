@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 4bad5fecd0fcc4ec911215d88c202d9b347311e5
+  specs:
+    ckeditor (3.7.0.rc2)
+      mime-types (~> 1.17.2)
+      orm_adapter (~> 0.0.6)
+
+GIT
   remote: git://github.com/sferik/rails_admin.git
   revision: ed0dcd1b0ebdbb0507c3963097a6d496d8f9fee0
   specs:
@@ -228,6 +236,7 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk
   capybara
+  ckeditor!
   coffee-rails (~> 3.2.1)
   devise
   factory_girl_rails

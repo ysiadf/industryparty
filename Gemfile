@@ -57,6 +57,7 @@ end
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-sdk'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
 
 
 gem "devise"
