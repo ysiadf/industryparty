@@ -1,0 +1,1 @@
+Host.find_by_name("Aaron McCann") || Host.create!(name: "Aaron McCann")
