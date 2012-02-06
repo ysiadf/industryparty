@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120206091037) do
+ActiveRecord::Schema.define(:version => 20120206091649) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(:version => 20120206091037) do
     t.string   "email"
     t.string   "company"
     t.string   "phone"
-    t.integer  "num_guests"
     t.integer  "industry_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -98,6 +97,19 @@ ActiveRecord::Schema.define(:version => 20120206091037) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "rsvps", :force => true do |t|
+    t.integer  "guest_id"
+    t.integer  "host_id"
+    t.integer  "party_id"
+    t.integer  "num_guests"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "rsvps", ["guest_id"], :name => "index_rsvps_on_guest_id"
+  add_index "rsvps", ["host_id"], :name => "index_rsvps_on_host_id"
+  add_index "rsvps", ["party_id"], :name => "index_rsvps_on_party_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

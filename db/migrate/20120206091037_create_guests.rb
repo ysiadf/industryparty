@@ -6,7 +6,6 @@ class CreateGuests < ActiveRecord::Migration
       t.string :email
       t.string :company
       t.string :phone
-      t.integer :num_guests
       t.references :industry
 
       t.timestamps
