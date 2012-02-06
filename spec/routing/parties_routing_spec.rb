@@ -32,7 +32,7 @@ describe PartiesController do
     end
 
     it "routes to #active" do
-      get ("/parties/active").should route_to("parties#active")
+      get("/parties/active").should route_to("parties#active")
     end
   end
 end
