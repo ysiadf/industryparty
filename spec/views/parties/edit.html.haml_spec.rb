@@ -17,8 +17,8 @@ describe "parties/edit" do
     assert_select "form", :action => parties_path(@party), :method => "post" do
       assert_select "input#party_name", :name => "party[name]"
       assert_select "textarea#party_info", :name => "party[info]"
-      assert_select "input#party_references", :name => "party[references]"
-      assert_select "input#party_references", :name => "party[references]"
+      #assert_select "input#party_references", :name => "party[references]"
+      #assert_select "input#party_references", :name => "party[references]"
     end
   end
 end

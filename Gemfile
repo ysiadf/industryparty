@@ -43,13 +43,20 @@ gem 'haml-rails'
 
 group :development, :test do
   gem 'rspec-rails', '2.7.0' # Because intellij doesn't support the latest version of rspec yet
-  gem 'capybara'
-  gem 'factory_girl_rails'
   gem 'faker'
-  gem 'launchy'
+end
+
+group :test do
   gem 'vcr', :git => 'https://github.com/myronmarston/vcr.git'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'capybara'
   gem 'webmock'
 end
 
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-sdk'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+
+
+gem "devise"
