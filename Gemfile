@@ -47,6 +47,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'launchy'
+  gem 'vcr', :git => 'https://github.com/myronmarston/vcr.git'
+  gem 'webmock'
 end
 
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
