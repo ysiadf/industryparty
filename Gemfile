@@ -48,3 +48,6 @@ group :development, :test do
   gem 'faker'
   gem 'launchy'
 end
+
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+gem 'aws-sdk'

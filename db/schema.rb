@@ -11,15 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120205205140) do
+ActiveRecord::Schema.define(:version => 20120205232813) do
 
   create_table "parties", :force => true do |t|
     t.string   "name"
     t.text     "info"
     t.datetime "start"
     t.boolean  "active"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "flier_file_name"
+    t.string   "flier_content_type"
+    t.integer  "flier_file_size"
+    t.datetime "flier_updated_at"
   end
 
 end
