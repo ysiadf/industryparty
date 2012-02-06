@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120206074630) do
+ActiveRecord::Schema.define(:version => 20120206085607) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -38,6 +38,24 @@ ActiveRecord::Schema.define(:version => 20120206074630) do
     t.integer "party_id"
   end
 
+  create_table "industries", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "industries_industry_lists", :id => false, :force => true do |t|
+    t.integer "industry_id"
+    t.integer "industry_list_id"
+  end
+
+  create_table "industry_lists", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "parties", :force => true do |t|
     t.string   "name"
     t.text     "info"
@@ -49,7 +67,10 @@ ActiveRecord::Schema.define(:version => 20120206074630) do
     t.string   "flier_content_type"
     t.integer  "flier_file_size"
     t.datetime "flier_updated_at"
+    t.integer  "industry_list_id"
   end
+
+  add_index "parties", ["industry_list_id"], :name => "index_parties_on_industry_list_id"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

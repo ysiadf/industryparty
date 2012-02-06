@@ -1,5 +1,6 @@
 class Party < ActiveRecord::Base
   has_and_belongs_to_many :hosts
+  belongs_to :industry_list
 
   has_attached_file(:flier, styles: {thumb: "100x100>"},
                     storage: :s3,
