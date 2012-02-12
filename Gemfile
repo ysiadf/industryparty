@@ -47,7 +47,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'vcr', :git => 'https://github.com/myronmarston/vcr.git'
+  #gem 'vcr', :git => 'https://github.com/myronmarston/vcr.git'
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'capybara'
@@ -58,6 +58,8 @@ gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-sdk'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
+
+gem 'simple_form'
 
 
 gem "devise"

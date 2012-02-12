@@ -4,7 +4,8 @@ describe "Parties" do
   describe "GET /parties" do
     it "works! (now write some real specs)" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get parties_path
+      Factory.create(:active_party)
+      get active_parties_path
       response.status.should be(200)
     end
   end

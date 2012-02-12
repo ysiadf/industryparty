@@ -1,18 +1,7 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @party.name
-%p
-  %b Info:
-  = @party.info
-%p
-  %b Start:
-  = @party.start
-
-%p
-  = image_tag @party.flier.url
-
-= link_to 'Edit', edit_party_path(@party)
-\|
-= link_to 'Back', parties_path
+.container
+  .flier
+    = image_tag @party.flier.url
+    .flier_links
+      = link_to "when/where", "javascript:void(0);", class: "modal_info"
+      = link_to "who", who_parties_path
+      = link_to "rsvp", "javascript:void(0);", class: "modal_rsvp"

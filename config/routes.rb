@@ -6,7 +6,10 @@ Industryparty::Application.routes.draw do
   devise_for :users
 
   resources :parties do
-    get 'active', :on => :collection
+    get 'active', on: :collection
+    get 'who', on: :collection
+    get 'info', on: :collection
+    get 'rsvp', on: :collection
   end
 
   root :to => 'parties#active'

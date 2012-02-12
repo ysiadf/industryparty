@@ -32,12 +32,6 @@ GIT
       cocaine (>= 0.0.2)
       mime-types
 
-GIT
-  remote: https://github.com/myronmarston/vcr.git
-  revision: 20623819ee2cc802ed81c754dab3924ba252ff39
-  specs:
-    vcr (2.0.0.rc1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -203,6 +197,9 @@ GEM
       ffi (~> 1.0.9)
       multi_json (~> 1.0.4)
       rubyzip
+    simple_form (1.5.2)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -249,8 +246,8 @@ DEPENDENCIES
   rails_admin!
   rspec-rails (= 2.7.0)
   sass-rails (~> 3.2.3)
+  simple_form
   sqlite3
   thin
   uglifier (>= 1.0.3)
-  vcr!
   webmock
