@@ -1,9 +1,17 @@
-= simple_form_for @party do |p|
-  = p.simple_fields_for :rsvp do |r|
-    = r.input :host
-    =r.simple_fields_for :guest do |g|
-      = g.input :name
-      = g.input :email
-      = g.input :company
-      = g.input :title
-  = p.button :submit
+#host-check-form-div
+  = simple_form_for @party, html: {id: "host-check-form"} do |p|
+    = p.simple_fields_for :rsvp do |r|
+      %h3 Whose guest are you?
+      = r.input :host, label: "List:", input_html: {id: "host-input"}
+    %input{type: 'button', value: 'Check List', id: "check-list-button"}
+#rsvp-form-div{style: "display: none;"}
+  = simple_form_for @party, html: {id: "rsvp-form"} do |p|
+    = p.simple_fields_for :rsvp do |r|
+      = r.input :host
+      = r.simple_fields_for :guest do |g|
+        = g.input :name
+        = g.input :email
+        = g.input :company
+        = g.input :title
+      = r.input :num_guests, as: :integer
+    = p.button :submit, 'RSVP'

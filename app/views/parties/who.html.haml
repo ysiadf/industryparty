@@ -10,14 +10,15 @@
 
   - @party.rsvps.each_with_index do |rsvp, guest_index|
     %tr
-      %td= guest_index + 1
-      %td= rsvp.guest.name
-      %td= rsvp.guest.company
-      %td= rsvp.guest.title
-      %td= rsvp.num_guests
+      - if rsvp.guest
+        %td= guest_index + 1
+        %td= rsvp.guest.name || "john doe"
+        %td= rsvp.guest.company || "anonymous"
+        %td= rsvp.guest.title || "private"
+        %td= rsvp.num_guests || ""
 
 %hr
 = @party.rsvps.count.to_s + " people total"
-= @party.rsvps.pluck(:num_guests).inject(0) { |total_guests, guests_in_this_rsvp| total_guests + guests_in_this_rsvp }
+= @party.rsvps.pluck(:num_guests).inject(0) { |total_guests, guests_in_this_rsvp| total_guests + (guests_in_this_rsvp || 0) }
 &nbsp;guests total
 %br

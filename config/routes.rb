@@ -12,6 +12,8 @@ Industryparty::Application.routes.draw do
     get 'rsvp', on: :collection
   end
 
+  resources :hosts
+
   root :to => 'parties#active'
 
   # The priority is based upon order of creation:

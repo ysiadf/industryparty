@@ -4,7 +4,6 @@ class Party < ActiveRecord::Base
   has_many :rsvps
   has_many :guests, :through => :rsvps
 
-
   has_attached_file(:flier, styles: {thumb: "100x100>"},
                     storage: :s3,
                     s3_credentials: File.expand_path(Rails.root.join('config/aws.yml')),
