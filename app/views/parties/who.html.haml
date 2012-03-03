@@ -1,7 +1,10 @@
-%h1 RSVP List:
-
-%table
+%table{id:"rsvptable", cellpadding:"2"}
+  %tr{id:"tableTitle"}
+    %td RSVP List
   %tr
+    %td{colspan:"5"}
+      %hr
+  %tr{align: "left", style:"color:#D2D2FF; text-decoration: underline"}
     %th #
     %th name
     %th company
@@ -9,16 +12,17 @@
     %th guests
 
   - @party.rsvps.each_with_index do |rsvp, guest_index|
-    %tr
+    %tr{class:"guestRow"}
       - if rsvp.guest
         %td= guest_index + 1
         %td= rsvp.guest.name || "john doe"
         %td= rsvp.guest.company || "anonymous"
         %td= rsvp.guest.title || "private"
         %td= rsvp.num_guests || ""
-
-%hr
-= @party.rsvps.count.to_s + " people total"
-= @party.rsvps.pluck(:num_guests).inject(0) { |total_guests, guests_in_this_rsvp| total_guests + (guests_in_this_rsvp || 0) }
-&nbsp;guests total
+  %tr
+    %td{colspan:"5"}  
+      %hr  
+  %tr{class:"tablefooter"}  
+    %td{colspan:"4"}= @party.rsvps.count.to_s + " people total"
+    %td= @party.rsvps.pluck(:num_guests).inject(0) { |total_guests, guests_in_this_rsvp| total_guests + (guests_in_this_rsvp || 0) }.to_s  + " guests total"
 %br

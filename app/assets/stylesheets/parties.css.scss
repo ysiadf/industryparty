@@ -1,3 +1,62 @@
 // Place all the styles related to the Parties controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body { 
+  background-color: #1E1F22;
+}
+
+#flier {
+  width: 500px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  margin-top: -225px;
+  left: 50%;
+  margin-left: -250px;
+} 
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+#flier_links {
+	font-size: 21px;
+	position: absolute;
+	bottom: 52px;
+	left: 56px;
+}
+#flier_links a {
+	color: white;
+	margin-right: 59px;
+	text-decoration: none;
+}
+
+#rsvptable {
+border: 1px solid white;
+background-color: #222233;
+width: 100%;
+}
+#rsvptable tr {
+	font-size: 16px;
+	font-weight: bolder;
+	color: white;
+}
+#tableTitle td {
+	color: #D2D2FF;
+	font-size: 16px;
+}
+#rsvptable tr{
+	#background-color: gray;
+}
+
+#rsvptable .guestRow{
+	font-size: 12px;
+	font-weight: normal;
+}
+#rsvptable .tablefooter {
+	color:#D2D2FF;
+}
+
+
