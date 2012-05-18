@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120206091649) do
+ActiveRecord::Schema.define(:version => 20120518222655) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20120206091649) do
     t.integer  "flier_file_size"
     t.datetime "flier_updated_at"
     t.integer  "industry_list_id"
+    t.boolean  "show_rsvps"
   end
 
   add_index "parties", ["industry_list_id"], :name => "index_parties_on_industry_list_id"

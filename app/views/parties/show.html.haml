@@ -3,5 +3,5 @@
     = image_tag @party.flier.url
     #flier_links
       = link_to "when/where", "javascript:void(0);", class: "modal_info"
-      = link_to "who", who_parties_path
+      = link_to "who", who_parties_path if @party.show_rsvps
       = link_to "rsvp", "javascript:void(0);", class: "modal_rsvp"
